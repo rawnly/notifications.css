@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Sample Page </title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+
+
+    <!-- Local Files -->
+    <script src="index.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../notifications.css">
+
+
+    <style>
+      #error {
+        bottom: 130px
+      }
+
+      #alert {
+        bottom: 65px
+      }
+      #alert, #error, #success {
+        transition: opacity 1s;
+        cursor: pointer !important;
+      }
+      .notification:hover {
+        opacity: .95
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <h1 align="center" > Click on a div </h1>
+    <div id="success" class="notification success">
+      <span>
+        New Notification available!
+      </span>
+    </div>
+
+    <div id="alert" class="notification alert">
+      <span>
+        New Notification available!
+      </span>
+    </div>
+
+    <div id="error" class="notification error">
+      <span>
+        New Notification available!
+      </span>
+    </div>
+  </body>
+</html>
