@@ -1,0 +1,30 @@
+// compileCompressed: ../compressed/$1.min.css, compileNested: ../$1.css
+
+@import "mixins"
+
+.notification
+  +notification()
+
+
+div.error.fl, .notification.error.fl,
+div.alert.fl, .notification.alert.fl,
+div.success.fl, .notification.success.fl
+  +float()
+
+div.error,
+.notification.error
+  +error()
+
+div.alert,
+.notification.alert
+  +alert()
+
+div.success,
+.notification.success
+  +success()
+
+//
+// Author: Federico Vitale (@Rawnly)
+// Url: http://rawnly.com
+// Github: https://github.com/rawnly/
+//
