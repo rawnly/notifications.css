@@ -4,7 +4,7 @@ Small **CSS**/**SASS** framework to dinamically create a notification tiles
 > Use the SASS file for deeper personalization
 
 ## Installation
-You can include [this file](https://github.com/Rawnly/notifications.css/blob/master/notifications.css) or the [sample page](https://rawnly.github.io/notifications.css/) or use the **RawGit CDN** below.
+You can include [this file](https://github.com/Rawnly/notifications.css/blob/master/notifications.css) or use the **RawGit CDN** below.
 
 ```html
   <link rel="stylesheet" href="  https://rawgit.com/Rawnly/notifications.css/master/notifications.css">
@@ -14,7 +14,7 @@ You can include [this file](https://github.com/Rawnly/notifications.css/blob/mas
 
 There are starter class `.tile` and `.notification` the difference is the **position**, on `.tile` the position is **absolute** and on `.notification` is fixed.
 
-See the [example doc](docs/index.html) for more examples.
+See the [example doc](docs/index.html) or the [sample page](https://rawnly.github.io/notifications.css/) for more examples.
 
 
 ### Types
