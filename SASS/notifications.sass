@@ -5,23 +5,55 @@
 .notification
   +notification()
 
+.tile
+  +notification(absolute)
 
-div.error.fl, .notification.error.fl,
-div.alert.fl, .notification.alert.fl,
-div.success.fl, .notification.success.fl
-  +float()
+.tile.error, .notification.error,
+.tile.alert, .notification.alert,
+.tile.success, .notification.success,
+.tile.info, .notification.info
+  &.floating
+    +float()
 
-div.error,
+  &.top.left
+    +topLeft()
+  &.top.right
+    +topRight()
+
+  &.mid.left
+    +midLeft()
+  &.mid.right
+    +midRight()
+  &.mid.top
+    +topCenter()
+  &.mid.bottom
+    +bottomCenter()
+
+  &.center
+    +center()
+
+  &.bottom.left
+    +bottomLeft()
+  &.bottom.right
+    +bottomRight()
+
+
+
+.tile.error,
 .notification.error
   +error()
 
-div.alert,
+.tile.alert,
 .notification.alert
   +alert()
 
-div.success,
+.tile.success,
 .notification.success
   +success()
+
+.tile.info,
+.notification.info
+  +info()
 
 //
 // Author: Federico Vitale (@Rawnly)

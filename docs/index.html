@@ -13,42 +13,90 @@
 
 
     <style>
-      #error {
-        bottom: 130px
+
+      .notification:hover, .tile:hover {
+        opacity: .95
       }
 
-      #alert {
-        bottom: 65px
+      .section {
+        width: 100%;
+        height: 100vh;
+        position: relative;
       }
-      #alert, #error, #success {
-        transition: opacity 1s;
-        cursor: pointer !important;
+
+      #btn {
+        border: 0;
+        background: #5C0BAC;
+        color: white;
+        padding: 15px;
+        width: auto;
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+        cursor: pointer;
+        outline: none;
+        transition: all .3s;
       }
-      .notification:hover {
-        opacity: .95
+      #btn:hover {
+        opacity: .8
       }
 
     </style>
 
   </head>
   <body>
-    <h1 align="center" > Click on a div </h1>
-    <div id="success" class="notification success">
-      <span>
-        New Notification available!
+
+
+    <div class="section">
+      <span class="tile info top left">
+        .topLeft
       </span>
+
+      <span class="tile info top right">
+        .topRight
+      </span>
+
+      <span class="tile info mid right">
+        .midRight
+      </span>
+
+      <span class="tile info bottom right">
+        .bottomRight
+      </span>
+
+      <span class="tile info mid bottom">
+        .bottomCenter
+      </span>
+
+      <span class="tile info bottom left">
+        .bottomLeft
+      </span>
+
+      <span class="tile info mid left">
+        .midLeft
+      </span>
+
+      <span class="tile info center">
+        .center
+      </span>
+
+      <span class="tile info mid top">
+        .topCenter
+      </span>
+    </div>
+    <div class="section">
+
+      <button id="btn" style="position: absolute; left: 50%; top:50%; transform: translate(-50%, -50%)">
+        Toggle Notification Tiles
+      </button>
+
+      <span id="author" class="notification alert mid bottom">
+        A project by <a href="https://github.com/rawnly">Rawnly</a>
+      </span>
+
+      <span id="left" class="notification success bottom left">Hey! I am a notification!</span>
+      <span id="right" class="notification success bottom right">I am fixed!</span>
+
     </div>
 
-    <div id="alert" class="notification alert">
-      <span>
-        New Notification available!
-      </span>
-    </div>
-
-    <div id="error" class="notification error">
-      <span>
-        New Notification available!
-      </span>
-    </div>
   </body>
 </html>

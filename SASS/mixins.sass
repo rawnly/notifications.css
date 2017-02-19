@@ -23,6 +23,10 @@
   background: $color
   color: white
 
+@mixin info($color: #147dd6)
+  background: $color
+  color: white
+
 
 @mixin float()
   -webkit-animation: 3s floating infinite alternate
@@ -32,16 +36,14 @@
   animation-timing-function: ease-in-out
 
 
-@mixin notification($content: '#')
+@mixin notification($pos: fixed)
     font-family: 'Raleway', 'Helvetica', sans-serif !important
     width: auto
     min-width: 150px
     max-width: 450px
     padding: 15px
     margin: 10px
-    position: fixed
-    right: 0
-    bottom: 0
+    position: $pos
     border-radius: 0
     text-align: left
 
@@ -55,6 +57,56 @@
       opacity: .8
       text-decoration: none
       &::before
-        content: $content
+        content: '#'
       &:hover
         text-decoration: underline
+
+
+
+
+
+@mixin topLeft
+  left: 10px
+  top: 10px
+
+@mixin topCenter
+  left: 50%
+  top: 10px
+  -webkit-transform: translateX(-50%)
+  transform: translateX(-50%)
+
+@mixin topRight
+  top: 10px
+  right: 10px
+
+@mixin midRight
+  right: 10px
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+@mixin bottomRight
+  right: 10px
+  bottom: 10px
+
+@mixin bottomCenter
+  left: 50%
+  bottom: 10px
+  -webkit-transform: translateX(-50%)
+  transform: translateX(-50%)
+
+@mixin bottomLeft
+  left: 10px
+  bottom: 10px
+
+@mixin midLeft
+  left: 10px
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+@mixin center
+  left: 50%
+  top: 50%
+  -webkit-transform: translateY(-50%) translateX(-50%)
+  transform: translateY(-50%) translateX(-50%)
